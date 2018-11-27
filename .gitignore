@@ -330,3 +330,5 @@ ASALocalRun/
 .mfractor/
 /3rdpartylibs/libcurl.lib
 /3rdpartylibs/libcurld.lib
+/3rdpartylibs/curlcpp.lib
+/3rdpartylibs/curlcppd.lib
