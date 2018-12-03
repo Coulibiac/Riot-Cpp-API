@@ -21,6 +21,9 @@
     <ClCompile Include="CurlTest.cpp">
       <Filter>Source Files\HttpRequestInterface</Filter>
     </ClCompile>
+    <ClCompile Include="HttpRequestInterface.cpp">
+      <Filter>Source Files\HttpRequestInterface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HttpRequestInterface.h">
