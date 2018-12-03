@@ -21,12 +21,24 @@
     <ClCompile Include="CurlTest.cpp">
       <Filter>Source Files\HttpRequestInterface</Filter>
     </ClCompile>
-    <ClCompile Include="HttpRequestInterface.cpp">
+    <ClCompile Include="CurlRequestInterface.cpp">
+      <Filter>Source Files\HttpRequestInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeRequestInterface.cpp">
       <Filter>Source Files\HttpRequestInterface</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HttpRequestInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CurlRequestInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpRequestHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeRequestInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -122,9 +122,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CurlTest.cpp" />
-    <ClCompile Include="HttpRequestInterface.cpp" />
+    <ClCompile Include="CurlRequestInterface.cpp" />
+    <ClCompile Include="FakeRequestInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CurlRequestInterface.h" />
+    <ClInclude Include="FakeRequestInterface.h" />
+    <ClInclude Include="HttpRequestHandler.h" />
     <ClInclude Include="HttpRequestInterface.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
