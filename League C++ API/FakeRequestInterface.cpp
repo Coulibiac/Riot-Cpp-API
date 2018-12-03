@@ -65,8 +65,7 @@ std::string FakeRequestInterface::getFeaturedGames()
 // Match functions
 std::string FakeRequestInterface::getMatchFromMatchId(std::string matchId)
 {
-	std::string fakeMatchData =
-		"{\"seasonId\": 11,\"queueId\" : 450,\"gameId\" : 2923475897,\"participantIdentities\" : [{\"player\": {\"currentPlatformId\": \"NA1\",\"summonerName\" : \"BreadBlast\",\"matchHistoryUri\" : \"/v1/stats/player_history/NA1/240512252\",\"platformId\" : \"NA1\",\"currentAccountId\" : 240512252,\"profileIcon\" : 3382,\"summonerId\" : 89031620,\"accountId\" : 240512252},\"participantId\": 1}";
+	std::string fakeMatchData =	"{\"seasonId\": 11,\"queueId\" : 450,\"gameId\" : 2923475897,\"participantIdentities\" : [{\"player\": {\"currentPlatformId\": \"NA1\",\"summonerName\" : \"BreadBlast\",\"matchHistoryUri\" : \"/v1/stats/player_history/NA1/240512252\",\"platformId\" : \"NA1\",\"currentAccountId\" : 240512252,\"profileIcon\" : 3382,\"summonerId\" : 89031620,\"accountId\" : 240512252},\"participantId\": 1}";
 	return fakeMatchData;
 }
 std::string FakeRequestInterface::getMatchListForAccount(std::string accountId)
