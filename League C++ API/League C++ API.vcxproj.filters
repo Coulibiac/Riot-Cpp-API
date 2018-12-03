@@ -16,6 +16,15 @@
     <Filter Include="Source Files\HttpRequestInterface">
       <UniqueIdentifier>{81b50871-7e18-4b14-a367-240dfc0b0b23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\HttpRequestInterface">
+      <UniqueIdentifier>{2dab4868-cd1f-4b04-b5ad-7a9380cf449a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\JsonParser">
+      <UniqueIdentifier>{4ab00f5a-20ad-4293-b537-5b405f8bec98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\JsonParser">
+      <UniqueIdentifier>{de1d3966-bffc-4a20-9898-bfc7130cf9b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CurlTest.cpp">
@@ -28,24 +37,24 @@
       <Filter>Source Files\HttpRequestInterface</Filter>
     </ClCompile>
     <ClCompile Include="JsonParser.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\JsonParser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="HttpRequestInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CurlRequestInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HttpRequestHandler.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\HttpRequestInterface</Filter>
     </ClInclude>
     <ClInclude Include="FakeRequestInterface.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\HttpRequestInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpRequestHandler.h">
+      <Filter>Header Files\HttpRequestInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpRequestInterface.h">
+      <Filter>Header Files\HttpRequestInterface</Filter>
     </ClInclude>
     <ClInclude Include="JsonParser.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\JsonParser</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
