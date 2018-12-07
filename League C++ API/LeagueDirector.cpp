@@ -15,10 +15,10 @@ LeagueDirector::~LeagueDirector()
 
 std::map<int, std::string> LeagueDirector::getChallengers()
 {
-	
+	return std::map<int, std::string>();
 }
 
 std::map<int, std::string> LeagueDirector::getMasters()
 {
-
+	return std::map<int, std::string>();
 }
