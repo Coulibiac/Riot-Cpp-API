@@ -125,6 +125,7 @@
     <ClCompile Include="CurlRequestInterface.cpp" />
     <ClCompile Include="FakeRequestInterface.cpp" />
     <ClCompile Include="JsonParser.cpp" />
+    <ClCompile Include="LeagueDirector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CurlRequestHandler.h" />
@@ -133,6 +134,7 @@
     <ClInclude Include="HttpRequestHandler.h" />
     <ClInclude Include="HttpRequestInterface.h" />
     <ClInclude Include="JsonParser.h" />
+    <ClInclude Include="LeagueDirector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

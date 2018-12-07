@@ -14,10 +14,24 @@ CurlRequestInterface::~CurlRequestInterface()
 	
 }
 
+std::string CurlRequestInterface::getGrandmasterList()
+{
+	std::string requestUrl = naUrl + "/lol/league/v3/grandmasterleagues/by-queue/RANKED_SOLO_5X5" + apiKeyString;
+	std::string reply = requestHandler->sendHttpRequest(requestUrl);
+	return reply;
+}
+
 // Get a list of challengers
 std::string CurlRequestInterface::getChallengerList()
 {
 	std::string requestUrl = naUrl + "/lol/league/v3/challengerleagues/by-queue/RANKED_SOLO_5X5" + apiKeyString;
+	std::string reply = requestHandler->sendHttpRequest(requestUrl);
+	return reply;
+}
+
+std::string CurlRequestInterface::getMastersList()
+{
+	std::string requestUrl = naUrl + "/lol/league/v3/masterleagues/by-queue/RANKED_SOLO_5X5" + apiKeyString;
 	std::string reply = requestHandler->sendHttpRequest(requestUrl);
 	return reply;
 }

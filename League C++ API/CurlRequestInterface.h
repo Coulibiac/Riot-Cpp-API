@@ -17,8 +17,10 @@ public:
 
 	~CurlRequestInterface();
 
+	virtual std::string getGrandmasterList();
 	// Get a list of challengers
 	virtual std::string getChallengerList();
+	virtual std::string getMastersList();
 
 	// Summoner champion functions
 	virtual std::string getChampionMasteriesForSummoner(std::string summonerId);

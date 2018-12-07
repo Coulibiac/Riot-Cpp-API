@@ -25,6 +25,12 @@
     <Filter Include="Source Files\JsonParser">
       <UniqueIdentifier>{de1d3966-bffc-4a20-9898-bfc7130cf9b1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\LeagueDirector">
+      <UniqueIdentifier>{e872cafb-8e9f-4193-827c-b03827acd199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LeagueDirector">
+      <UniqueIdentifier>{06dfd155-46de-4471-bab9-96118d283ce8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CurlRequestInterface.cpp">
@@ -38,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="CurlRequestHandler.cpp">
       <Filter>Source Files\HttpRequestInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="LeagueDirector.cpp">
+      <Filter>Source Files\LeagueDirector</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="CurlRequestHandler.h">
       <Filter>Header Files\HttpRequestInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="LeagueDirector.h">
+      <Filter>Header Files\LeagueDirector</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
