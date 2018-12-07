@@ -39,6 +39,9 @@
     <ClCompile Include="JsonParser.cpp">
       <Filter>Source Files\JsonParser</Filter>
     </ClCompile>
+    <ClCompile Include="CurlRequestHandler.cpp">
+      <Filter>Source Files\HttpRequestInterface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CurlRequestInterface.h">
@@ -55,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="JsonParser.h">
       <Filter>Header Files\JsonParser</Filter>
+    </ClInclude>
+    <ClInclude Include="CurlRequestHandler.h">
+      <Filter>Header Files\HttpRequestInterface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
