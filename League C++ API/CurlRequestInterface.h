@@ -2,6 +2,11 @@
 #define CURL_REQUEST_INTERFACE_H
 
 #include "HttpRequestInterface.h"
+#include "curl/curl.h"
+#include <memory>
+
+class CurlRequestHandler;
+
 /*
 	This is the class that defines the CURL interface, and uses the CURL HTTP handler object
 */
@@ -35,7 +40,10 @@ public:
 
 
 private:
+	static const std::string naUrl;
+	static const std::string apiKeyString;
 
+	std::unique_ptr<CurlRequestHandler> requestHandler;
 };
 
 #endif
