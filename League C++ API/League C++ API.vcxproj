@@ -122,7 +122,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CurlRequestHandler.cpp" />
-    <ClCompile Include="CurlTest.cpp" />
     <ClCompile Include="CurlRequestInterface.cpp" />
     <ClCompile Include="FakeRequestInterface.cpp" />
     <ClCompile Include="JsonParser.cpp" />

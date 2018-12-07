@@ -27,9 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CurlTest.cpp">
-      <Filter>Source Files\HttpRequestInterface</Filter>
-    </ClCompile>
     <ClCompile Include="CurlRequestInterface.cpp">
       <Filter>Source Files\HttpRequestInterface</Filter>
     </ClCompile>
