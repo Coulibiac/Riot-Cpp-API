@@ -13,8 +13,10 @@ public:
 
 	virtual ~HttpRequestInterface() {};
 
+	virtual std::string getGrandmasterList() = 0;
 	// Get a list of challengers
 	virtual std::string getChallengerList() = 0;
+	virtual std::string getMastersList() = 0;
 
 	// Summoner champion functions
 	virtual std::string getChampionMasteriesForSummoner(std::string summonerId) = 0;

@@ -13,12 +13,24 @@ LeagueDirector::~LeagueDirector()
 
 }
 
-std::map<int, std::string> LeagueDirector::getChallengers()
+std::map<std::string, std::string> LeagueDirector::getChallengers()
 {
-	return std::map<int, std::string>();
+	std::map<std::string, std::string> challengerList;
+	std::string stringJson = requestInterface->getChallengerList();
+	if (stringJson != "")
+	{
+		// TODO: Parse JSON
+	}
+	return std::map<std::string, std::string>();
 }
 
-std::map<int, std::string> LeagueDirector::getMasters()
+std::map<std::string, std::string> LeagueDirector::getMasters()
 {
-	return std::map<int, std::string>();
+	std::map<std::string, std::string> challengerList;
+	std::string stringJson = requestInterface->getMastersList();
+	if (stringJson != "")
+	{
+		// TODO: Parse JSON
+	}
+	return std::map<std::string, std::string>();
 }

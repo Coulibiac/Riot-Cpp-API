@@ -16,9 +16,9 @@ public:
 
 	~LeagueDirector();
 
-	std::map<int, std::string> getChallengers();
+	std::map<std::string, std::string> getChallengers();
 
-	std::map<int, std::string> getMasters();
+	std::map<std::string, std::string> getMasters();
 
 private:
 	std::unique_ptr<HttpRequestInterface> requestInterface;
