@@ -1,18 +1,33 @@
 #include <iostream>
 #include <stdio.h>
+#include <vector>
 #include <rapidjson/document.h>
 
 using namespace rapidjson;
 
 int main()
 {
-	const char summonerInfo[] = "{\n"
-"    \"profileIconId\": 3791,\n"
-"    \"name\": \"Wyntèr\",\n"
-"    \"summonerLevel\": 124,\n"
-"    \"accountId\": 232276261,\n"
-"    \"id\": 73779900,\n"
-"    \"revisionDate\": 1543799017000\n"
+	const char summonerInfo[] = " {\n"
+"    \"tier\": \"MASTER\",\n"
+"    \"leagueId\": \"bb7f45c3-66d1-3b22-bc68-7a6c65b38c4e\",\n"
+"    \"entries\": [\n"
+"        {\n"
+"            \"wins\": 617,\n"
+"            \"losses\": 566,\n"
+"            \"rank\": \"I\",\n"
+"            \"playerOrTeamName\": \"Vakin\",\n"
+"            \"playerOrTeamId\": \"41643804\",\n"
+"            \"leaguePoints\": 0\n"
+"        },\n"
+"\t{\n"
+"            \"wins\": 578,\n"
+"            \"losses\": 531,\n"
+"            \"rank\": \"I\",\n"
+"            \"playerOrTeamName\": \"urelectric\",\n"
+"            \"playerOrTeamId\": \"43588594\",\n"
+"            \"leaguePoints\": 0\n"
+"        }\n"
+"    ]\n"
 "}";
 
 	Document document;
@@ -34,12 +49,13 @@ int main()
 
 	printf("\nParsing to document succeeded.\n");
 
-	printf("\nAccess values in document:\n");
-	assert(document.IsObject());    // Document is a JSON value represents the root of DOM. Root can be either an object or array.
+	//std::vector<std::string> listEntries;
 
-	assert(document.HasMember("name"));
-	assert(document["name"].IsString());
-	printf("name = %s\n", document["name"].GetString());
+	rapidjson::Value& entries = document["entries"];
+	assert(entries.IsArray());
+
+	for (rapidjson::SizeType i = 0; i < entries.Size(); i++)
+		std::cout << entries[i]["playerOrTeamId"].GetString() << "\n";
 
 	int test;
 	std::cin >> test;

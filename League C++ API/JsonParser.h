@@ -18,8 +18,6 @@ public:
 	std::map<std::string, std::string> parseMasterIds(const std::string masterList);
 
 private:
-	std::unique_ptr<CurlRequestInterface> requestInterface;
-
 	Document document;
 };
 

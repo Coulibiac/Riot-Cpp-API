@@ -2,7 +2,6 @@
 
 JsonParser::JsonParser()
 {
-	requestInterface = std::make_unique<CurlRequestInterface>();
 }
 
 JsonParser::~JsonParser()
@@ -11,17 +10,25 @@ JsonParser::~JsonParser()
 
 std::map<std::string, std::string> JsonParser::parseMasterIds(const std::string masterList)
 {
-	std::map<std::string, std::string> masterRoles;
+	std::map<std::string, std::string> masterIds;
 
 	if (masterList != "")
 	{
 		const char *masterListC = masterList.c_str();
 		if (!document.Parse(masterListC).HasParseError())
 		{
-			//TODO
+			rapidjson::Value& entries = document["entries"];
+			for (rapidjson::SizeType i = 0; i < entries.Size(); i++)
+			{
+				masterIds.emplace(entries[i]["playerOrTeamName"].GetString(), entries[i]["playerOrTeamId"].GetString());
+			}
+		}
+		else
+		{
+			std::cout << "Could not parse master list for IDs.";
 		}
 	}
 
-	return masterRoles;
+	return masterIds;
 }
 
