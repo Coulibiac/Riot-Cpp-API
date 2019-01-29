@@ -23,21 +23,21 @@ public:
 	virtual std::string getMastersList();
 
 	// Summoner champion functions
-	virtual std::string getChampionMasteriesForSummoner(std::string summonerId);
-	virtual std::string getChampionMasteriesForSummoner(std::string summonerId, std::string champId);
+	virtual std::string getChampionMasteriesForSummoner(std::string encryptedSummonerId);
+	virtual std::string getChampionMasteriesForSummoner(std::string encryptedSummonerId, std::string champId);
 
 	// Summoner name-id functions
 	virtual std::string getSummonerInfoWithName(std::string summonerName);
-	virtual std::string getSummonerInfoWithAcctId(std::string acctId);
-	virtual std::string getSummonerInfoWithSummonerId(std::string summonerId);
+	virtual std::string getSummonerInfoWithAcctId(std::string encryptedAcctId);
+	virtual std::string getSummonerInfoWithSummonerId(std::string encryptedSummonerId);
 
 	// Spectator Functions
-	virtual std::string getSpectatorKey(std::string summonerId);
+	virtual std::string getSpectatorKey(std::string encryptedSummonerId);
 	virtual std::string getFeaturedGames();
 
 	// Match functions
 	virtual std::string getMatchFromMatchId(std::string matchId);
-	virtual std::string getMatchListForAccount(std::string accountId);
+	virtual std::string getMatchListForAccount(std::string encryptedAccountId);
 	virtual std::string getTimelineForMatch(std::string matchId);
 
 
