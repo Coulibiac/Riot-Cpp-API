@@ -20,7 +20,9 @@ std::map<std::string, std::string> JsonParser::parseMasterIds(const std::string 
 			rapidjson::Value& entries = document["entries"];
 			for (rapidjson::SizeType i = 0; i < entries.Size(); i++)
 			{
-				masterIds.emplace(entries[i]["playerOrTeamName"].GetString(), entries[i]["playerOrTeamId"].GetString());
+				//std::cout << entries[i]["summonerName"].GetString() << std::endl;
+				masterIds.emplace(entries[i]["summonerName"].GetString(), std::to_string(entries[i]["leaguePoints"].GetInt()));
+				//masterIds.emplace(entries[i]["playerOrTeamName"].GetString(), entries[i]["playerOrTeamId"].GetString());
 			}
 		}
 		else

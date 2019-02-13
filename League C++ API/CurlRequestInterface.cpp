@@ -2,9 +2,6 @@
 #include "CurlRequestHandler.h"
 #include <iostream>
 
-//const std::string CurlRequestInterface::regionUrl = "https://na1.api.riotgames.com";
-//const std::string CurlRequestInterface::apiKeyString = "?api_key=RGAPI-24a79721-416c-4cdd-9d34-f0152729b30c";
-
 CurlRequestInterface::CurlRequestInterface(const std::string& apiKey, const std::string& regionBaseUrl)
 	: regionUrl(regionBaseUrl), apiKeyString(apiKey)
 {
@@ -34,9 +31,9 @@ std::string CurlRequestInterface::getChallengerList()
 std::string CurlRequestInterface::getMastersList()
 {
 	std::string requestUrl = regionUrl + "/lol/league/v4/masterleagues/by-queue/RANKED_SOLO_5x5?" + apiKeyString;
-	std::cout << "Sending a request to: " << requestUrl << std::endl;
+	//std::cout << "Sending a request to: " << requestUrl << std::endl;
 	std::string reply = requestHandler->sendHttpRequest(requestUrl);
-	std::cout << "Got a reply: " << reply << std::endl;
+	//std::cout << "Got a reply: " << reply << std::endl;
 	return reply;
 }
 

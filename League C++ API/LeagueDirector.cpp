@@ -31,7 +31,8 @@ std::map<std::string, std::string> LeagueDirector::getMasters()
 	if (stringJson != "")
 	{
 		// TODO: Parse JSON
-		mastersList["test"] = stringJson;
+		std::cout << stringJson << std::endl;
+		mastersList = jsonParser->parseMasterIds(stringJson);
 	}
 	return mastersList;
 	//return std::map<std::string, std::string>();

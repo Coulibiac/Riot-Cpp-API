@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <vector>
 #include <rapidjson/document.h>
+#include <iomanip>
 
 #include "LeagueDirector.h"
 
@@ -70,7 +71,7 @@ int main()
 	std::map<std::string, std::string> rtnVal = ld.getMasters();
 	for (auto it = rtnVal.cbegin(); it != rtnVal.cend(); ++it)
 	{
-		std::cout << "Here are a list: " << it->first << std::endl;
+		std::cout << std::left << std::setw(10) << "Name: " << std::setw(25) << it->first << std::setw(10) << "Points: " << std::setw(10) << it->second << std::endl;
 	}
 	std::cin >> test;
 	/*
