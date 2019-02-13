@@ -2,9 +2,9 @@
 #include "CurlRequestInterface.h"
 #include "JsonParser.h"
 
-LeagueDirector::LeagueDirector()
+LeagueDirector::LeagueDirector(const std::string& apiKey, const std::string& regionBaseUrl)
 {
-	requestInterface = std::make_unique<CurlRequestInterface>();
+	requestInterface = std::make_unique<CurlRequestInterface>(apiKey, regionBaseUrl);
 	jsonParser = std::make_unique<JsonParser>();
 }
 
@@ -26,11 +26,13 @@ std::map<std::string, std::string> LeagueDirector::getChallengers()
 
 std::map<std::string, std::string> LeagueDirector::getMasters()
 {
-	std::map<std::string, std::string> challengerList;
+	std::map<std::string, std::string> mastersList;
 	std::string stringJson = requestInterface->getMastersList();
 	if (stringJson != "")
 	{
 		// TODO: Parse JSON
+		mastersList["test"] = stringJson;
 	}
-	return std::map<std::string, std::string>();
+	return mastersList;
+	//return std::map<std::string, std::string>();
 }

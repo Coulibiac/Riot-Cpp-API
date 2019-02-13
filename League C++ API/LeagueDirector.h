@@ -12,7 +12,7 @@ class LeagueDirector
 {
 public:
 
-	LeagueDirector();
+	LeagueDirector(const std::string& apiKey, const std::string& regionBaseUrl);
 
 	~LeagueDirector();
 

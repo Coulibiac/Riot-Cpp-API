@@ -13,7 +13,7 @@ class CurlRequestHandler;
 class CurlRequestInterface : public HttpRequestInterface
 {
 public:
-	CurlRequestInterface();
+	CurlRequestInterface(const std::string& apiKey, const std::string& regionBaseUrl);
 
 	~CurlRequestInterface();
 
@@ -42,8 +42,8 @@ public:
 
 
 private:
-	static const std::string naUrl;
-	static const std::string apiKeyString;
+	const std::string regionUrl;
+	const std::string apiKeyString;
 
 	std::unique_ptr<CurlRequestHandler> requestHandler;
 };
