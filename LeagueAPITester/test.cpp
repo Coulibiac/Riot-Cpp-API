@@ -3,8 +3,10 @@
 #include <vector>
 #include <rapidjson/document.h>
 #include <iomanip>
+#include <spdlog/spdlog.h>
 
-#include "LeagueDirector.h"
+#include "LeagueDirector.h" 
+#include "LeaguePlayer.h"
 
 using namespace rapidjson;
 
@@ -67,11 +69,20 @@ int main()
 
 	int test;
 
-	LeagueDirector ld{"KEY HERE", "https://na1.api.riotgames.com" };
-	std::map<std::string, std::string> rtnVal = ld.getMasters();
+	LeagueDirector ld{ "KEY HERE", "https://na1.api.riotgames.com" };
+	//std::map<std::string, std::string> rtnVal = ld.getMasters();
+	std::vector<LeaguePlayer> testPlayer = ld.returnMastersPlayers();
+	/*
 	for (auto it = rtnVal.cbegin(); it != rtnVal.cend(); ++it)
 	{
-		std::cout << std::left << std::setw(10) << "Name: " << std::setw(25) << it->first << std::setw(10) << "Points: " << std::setw(10) << it->second << std::endl;
+		//std::cout << std::left << std::setw(10) << "Name: " << std::setw(25) << it->first << std::setw(10) << "Points: " << std::setw(10) << it->second << std::endl;
+		spdlog::set_level(spdlog::level::debug);
+		spdlog::debug("Name: {0} \t Points: {1}", it->first, it->second);
+	}
+	*/
+	for (auto it = testPlayer.begin(); it != testPlayer.end(); ++it)
+	{
+		it->dumpInfo();
 	}
 	std::cin >> test;
 	/*

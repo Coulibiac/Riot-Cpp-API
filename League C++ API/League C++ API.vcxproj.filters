@@ -31,6 +31,12 @@
     <Filter Include="Header Files\LeagueDirector">
       <UniqueIdentifier>{06dfd155-46de-4471-bab9-96118d283ce8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Players">
+      <UniqueIdentifier>{660f0bc2-9e04-41e5-8208-76b021c92649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Player">
+      <UniqueIdentifier>{ad12815b-55e4-47d2-bfb9-105aee2fb6b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CurlRequestInterface.cpp">
@@ -47,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="LeagueDirector.cpp">
       <Filter>Source Files\LeagueDirector</Filter>
+    </ClCompile>
+    <ClCompile Include="LeaguePlayer.cpp">
+      <Filter>Source Files\Players</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="LeagueDirector.h">
       <Filter>Header Files\LeagueDirector</Filter>
+    </ClInclude>
+    <ClInclude Include="LeaguePlayer.h">
+      <Filter>Header Files\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

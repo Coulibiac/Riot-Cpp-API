@@ -7,6 +7,7 @@
 
 class HttpRequestInterface;
 class JsonParser;
+class LeaguePlayer;
 
 class LeagueDirector
 {
@@ -19,6 +20,8 @@ public:
 	std::map<std::string, std::string> getChallengers();
 
 	std::map<std::string, std::string> getMasters();
+
+	std::vector<LeaguePlayer> returnMastersPlayers();
 
 private:
 	std::unique_ptr<HttpRequestInterface> requestInterface;
